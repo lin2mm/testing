@@ -1,0 +1,19 @@
+# iFarted relay server — one-command local run
+#   docker compose up --build
+# → http://localhost:3000/health
+# → http://localhost:3000/admin.html?key=YOUR_ADMIN_KEY
+services:
+  api:
+    build: ./apps/server
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      DB_PATH: /app/data/ifarted.db
+      # ADMIN_KEY: change-me  # uncomment to protect /admin
+    volumes:
+      - ifarted-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  ifarted-data:

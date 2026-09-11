@@ -1,0 +1,26 @@
+{
+  "name": "ifarted",
+  "version": "0.14.0-alpha",
+  "private": true,
+  "description": "iFarted — Yo-style \"I farted.\" push notification app. Independent monorepo: server + web + mobile + contracts.",
+  "type": "module",
+  "workspaces": [
+    "apps/server",
+    "apps/web",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace @ifarted/server run dev",
+    "dev:server:node": "npm --workspace @ifarted/server run dev:node",
+    "dev:web": "npm --workspace @ifarted/web run dev",
+    "build:web": "npm --workspace @ifarted/web run build",
+    "lint:server": "npm --workspace @ifarted/server run lint",
+    "lint:web": "npm --workspace @ifarted/web run lint",
+    "lint:contracts": "npm --workspace @ifarted/contracts run lint",
+    "test:server": "npm --workspace @ifarted/server run test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,63 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+
+# ENV
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea
+.vscode
+
+# macOS
+.DS_Store
+
+# iFarted — mobile (Expo)
+apps/mobile/.expo
+apps/mobile/node_modules
+apps/mobile/dist
+apps/mobile/*.jks
+apps/mobile/*.p8
+apps/mobile/*.p12
+apps/mobile/*.key
+apps/mobile/*.mobileprovision
+apps/mobile/google-services.json
+apps/mobile/GoogleService-Info.plist
+.expo
+.expo-shared
+
+# iFarted — server (Bun + SQLite)
+apps/server/node_modules
+apps/server/dist
+apps/server/ifarted.db*
+apps/server/.env
+apps/server/bun.lock
+
+# iFarted — web / contracts
+apps/web/node_modules
+apps/web/dist
+packages/*/node_modules
+packages/*/dist
+
+# misc
+bun.lockb
+*.db
+*.db-shm
+*.db-wal
+/data
